@@ -4,7 +4,7 @@ $senha = $_POST['senha'];
 $conn = mysqli_connect('localhost','phpmyadmin','Kamaka05','login');
 if (isset($login) && isset($senha)) {
  $verifica = mysqli_query($conn,"SELECT * FROM users WHERE name =
- '$login' AND pass = '$senha'");
+ '$login' AND passe = '$senha'");
  if (mysqli_num_rows($verifica)<=0) {
  echo '<h1 style="color:red;">Acesso não autorizado</h1>';
  }
